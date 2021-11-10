@@ -72,3 +72,5 @@ gem 'jquery-rails'
 # gem 'paperclip
 # gem 'uniquify'
 # gem 'will_paginate'
+
+gem 'clearance'

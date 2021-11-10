@@ -12,10 +12,27 @@
     <title>ValetBike</title>
   </head>
   <body>
-    <div id="site-container" class="flexbox vertical stretch flex-1">
-      <div class="flexbox vertical center">
-        <%= yield %>
+    <header>
+      <% if signed_in? %>
+        Signed in as: <%= current_user.email %>
+        <%= button_to 'Sign out', sign_out_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in', sign_in_path %>
+      <% end %>
+    </header>
+
+    <section>
+      <div id="flash">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
       </div>
-    </div>
+
+      <div id="site-container" class="flexbox vertical stretch flex-1">
+        <div class="flexbox vertical center">
+          <%= yield %>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
