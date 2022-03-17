@@ -78,7 +78,6 @@ Try to add /config/initializers/_env.rb in your app with your mysql username/pas
 
 ## Next Step
 * **Make the front page mobile first**
-* Host our web application on Heroku
 * Add FAQ and News page
 * Add multiple languages
 * Color-blind friendly
